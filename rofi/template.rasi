@@ -1,0 +1,182 @@
+configuration {
+show-icons:false;
+  font:                           "Roboto medium 12";
+  columns: 1;
+  lines: 10;
+
+}
+* {
+
+
+
+	font:												"Roboto medium 12";
+
+    active-background: @color3;
+    active-foreground: @color0;
+    normal-background: @color3;
+    normal-foreground: @color0;
+    urgent-background: @color3;
+    urgent-foreground: @color1;
+
+    
+    alternate-active-background: @color3;
+    alternate-active-foreground: @color0;
+
+    selected-active-background: @color1;
+    selected-active-foreground: @color0;
+
+
+    alternate-normal-background: @color3;
+    alternate-normal-foreground: @color0;
+
+    selected-normal-background: @color1;
+    selected-normal-foreground: @color0;
+
+
+    alternate-urgent-background: @color3;
+    alternate-urgent-foreground: @color0;
+
+    selected-urgent-background: @color3;
+    selected-urgent-foreground: @color0;
+
+    background-color: @background;
+
+    spacing: 5;
+
+}
+
+#window {
+    background-color: @background;
+    border: 10;
+    border-color:@color1;
+    border-radius:1ch;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+}
+
+#message {
+    border: 2px 0px 0px;
+    border-color: @color1;
+    padding: 1px;
+}
+
+#textbox {
+    text-color: @color1;
+}
+
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: @color1;
+}
+
+#listview {
+    fixed-height: 0;
+    border: 5px 0px 0px;
+    border-color:@color1;
+    scrollbar: true;
+    padding:15 0 ;
+    margin:0;
+}
+
+#element {
+    border: 0;
+    padding: 15px;
+}
+
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+#element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+    margin:50  10;
+}
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border-radius: 0 25 25 0;
+}
+
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+    border-radius: 0 25 25 0;
+}
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+
+#scrollbar {
+    width: 0px;
+    border: 0;
+    handle-width: 0px;
+    padding: 0;
+}
+
+#sidebar {
+}
+
+#button {
+    text-color: @normal-foreground;
+}
+
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+#inputbar {
+    spacing: 2;
+    text-color: @normal-foreground;
+    padding: 10px;
+}
+
+#case-indicator {
+    spacing: 0;
+    text-color: @normal-foreground;
+}
+
+#entry {
+    spacing: 0;
+    text-color: @color2;
+}
+
+#prompt {
+    spacing: 0;
+    text-color: @color1;
+
+}
